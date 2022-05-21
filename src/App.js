@@ -1,21 +1,14 @@
-import pokemonData from "./pokemon.json";
-import PokemonList from "./PokemonList.js";
+import MainPage from "./MainPage.js";
 import PokemonDetails from "./PokemonDetails.js";
-
-import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
-  const [currentID, setCurrentID] = useState(1);
-
-  const changePokemonID = (id) => {
-    setCurrentID(id);
-  };
-
   return (
-    <div className="flex-container">
-      <PokemonList pokemonList={pokemonData} changeID={changePokemonID} />
-      <PokemonDetails pokemon={pokemonData[currentID - 1]} />
-    </div>
+    <Routes>
+      <Route path="/" element={<MainPage />}>
+        <Route path=":id" element={<PokemonDetails />} />
+      </Route>
+    </Routes>
   );
 }
 
