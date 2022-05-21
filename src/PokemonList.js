@@ -6,7 +6,11 @@ export default function PokemonList() {
   return (
     <ul className={style.mainSection}>
       {pokemonData.map((pokemon) => (
-        <Link to={pokemon.id.toString()} key={pokemon.id}>
+        <Link
+          to={pokemon.id.toString()}
+          key={pokemon.id}
+          className={style.listLink}
+        >
           <li className={style.listItem}>
             {pokemon.id.toString().padStart(3, "0")} - {pokemon.name}
           </li>

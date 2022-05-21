@@ -23,3 +23,12 @@
   background-color: #fbde45;
   cursor: pointer;
 }
+
+.listLink {
+  text-decoration: none;
+  color: blue;
+}
+
+.mainSection::-webkit-scrollbar-track {
+  background: red;
+}
