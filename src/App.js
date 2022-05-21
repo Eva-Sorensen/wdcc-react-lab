@@ -2,7 +2,7 @@ import pokemonData from "./pokemon.json";
 import PokemonList from "./PokemonList.js";
 import PokemonDetails from "./PokemonDetails.js";
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [currentID, setCurrentID] = useState(1);
@@ -12,10 +12,9 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <p> test</p>
-      <PokemonDetails pokemon={pokemonData[currentID - 1]} />
+    <div className="flex-container">
       <PokemonList pokemonList={pokemonData} changeID={changePokemonID} />
+      <PokemonDetails pokemon={pokemonData[currentID - 1]} />
     </div>
   );
 }

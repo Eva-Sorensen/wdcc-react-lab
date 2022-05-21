@@ -1,0 +1,25 @@
+@import url("http://fonts.cdnfonts.com/css/pokemon-solid");
+
+.mainSection {
+  width: 500px;
+  height: 100vh;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #dc0a2d;
+  overflow-y: scroll;
+}
+
+.listItem {
+  background-color: #e2dbe0;
+  padding: 10px;
+  font-family: "Pokemon Solid", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 15px;
+}
+
+.listItem:hover {
+  background-color: #fbde45;
+  cursor: pointer;
+}
